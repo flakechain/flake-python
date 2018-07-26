@@ -6,26 +6,26 @@ from sha3 import keccak_256
 from . import base58
 from . import numbers
 
-_ADDR_REGEX = re.compile(r'^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{95}$')
-_IADDR_REGEX = re.compile(r'^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{106}$')
+_ADDR_REGEX = re.compile(r'^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{97}$')
+_IADDR_REGEX = re.compile(r'^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{109}$')
 
 
 class Address(object):
-    """Monero address.
+    """FlakeChain address.
 
     Address of this class is the master address for a :class:`Wallet <monero.wallet.Wallet>`.
 
-    :param address: a Monero address as string-like object
+    :param address: a FlakeChain address as string-like object
     :param label: a label for the address (defaults to `None`)
     """
     label = None
-    _valid_netbytes = (18, 53, 24)
+    _valid_netbytes = (151, 30614, 31382)
     # NOTE: _valid_netbytes order is (mainnet, testnet, stagenet)
 
     def __init__(self, addr, label=None):
         addr = str(addr)
         if not _ADDR_REGEX.match(addr):
-            raise ValueError("Address must be 95 characters long base58-encoded string, "
+            raise ValueError("Address must be 97 characters long base58-encoded string, "
                 "is {addr} ({len} chars length)".format(addr=addr, len=len(addr)))
         self._decode(addr)
         self.label = label or self.label
