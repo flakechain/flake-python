@@ -1,4 +1,4 @@
-Python Monero module
+Python FlakeChain module
 ====================
 
 |travis|_ |coveralls|_
