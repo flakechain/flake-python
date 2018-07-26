@@ -26,10 +26,10 @@ def find_version(*parts):
 version = find_version('monero', '__init__.py')
 
 setup(
-    name = 'monero-python',
+    name = 'flake-python',
     version = version,
-    description = 'A comprehensive Python module for handling Monero cryptocurrency',
-    url = 'https://github.com/emesik/monero-python/',
+    description = 'A comprehensive Python module for handling FlakeChain cryptocurrency',
+    url = 'https://github.com/flakechain/flake-python/',
     long_description = open('README.rst', 'rb').read().decode('utf-8'),
     install_requires = open('requirements.txt', 'r').read().splitlines(),
     tests_require=open('test_requirements.txt', 'r').read().splitlines(),
@@ -50,6 +50,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    keywords = 'monero cryptocurrency',
+    keywords = 'flakechain cryptocurrency',
     test_suite='tests',
 )

@@ -1,5 +1,6 @@
 BSD 3-Clause License
 
+Copyright (c) 2018 FlakeChain contributors
 Copyright (c) 2017 Michał Sałaban
 Copyright (c) 2016 The MoneroPy Developers
 All rights reserved.
